@@ -18,7 +18,7 @@ import { SearchContext } from "../../context/SearchContext";
 import { AuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Reserve } from "../../components/reserve/Reserve";
-import hi from "date-fns/esm/locale/hi/index.js";
+
 
 export const Hotel = () => {
   const { user } = useContext(AuthContext);
@@ -37,9 +37,6 @@ export const Hotel = () => {
     `http://localhost:8800/api/hotels/find/${hotelId[2]}`
   );
 
-  if (data) {
-    console.log(data);
-  }
 
   const { dates, destination, options } = useContext(SearchContext);
 
